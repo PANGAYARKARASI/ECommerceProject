@@ -1,0 +1,37 @@
+<mat-sidenav-container style="height: 100vh;">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div class="toolbar-content">
+        <div class="toolbar-title">E-Commerce Platform</div>
+        <div class="toolbar-buttons">
+          <button   *ngIf="!isLoggedIn" mat-button  mat-raised-button color="primary" routerLink="/login">Login</button>
+          <button  *ngIf="!isLoggedIn" mat-button  mat-raised-button color="primary" routerLink="/register" style="margin-left: 16px;">Register</button>
+           <button *ngIf="isLoggedIn" mat-button mat-raised-button color="primary" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </mat-toolbar>
+    <div><mat-card class="mat-elevation-z8 product-list">
+  <h1>List of Products</h1>
+
+  <div class="button-container">
+    <button mat-button *ngIf="!canCreate()" (click)="navigateToCart()">Cart</button>
+        <button mat-button *ngIf="!canCreate()" (click)="navigateToOrder()">Order</button>
+
+    <button mat-button *ngIf="canCreate()" (click)="create()">Create New Product</button>
+  </div>
+
+  <div class="product-grid">
+    <mat-card class="product-card" *ngFor="let product of products" (click)="openDialog(product)">
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+        <mat-card-subtitle>{{ product.price | currency:'INR' }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="product.imageUrl" alt="{{ product.name }}">
+    </mat-card>
+  </div>
+</mat-card>
+
+</div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

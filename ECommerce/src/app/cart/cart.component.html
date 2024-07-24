@@ -1,0 +1,59 @@
+<div class="page-container">
+  <div class="cart-container">
+    <h2>Shopping Cart</h2>
+    <div *ngIf="cart.length === 0">
+      <p>Your cart is empty</p>
+    </div>
+    <div *ngIf="cart.length > 0">
+      <table mat-table [dataSource]="cart" class="mat-elevation-z8">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+
+        <!-- Price Column -->
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef> Price </th>
+          <td mat-cell *matCellDef="let element"> {{element.price | currency: 'INR'}} </td>
+        </ng-container>
+
+        <!-- Quantity Column -->
+        <ng-container matColumnDef="quantity">
+          <th mat-header-cell *matHeaderCellDef class="text-center"> Quantity </th>
+          <td mat-cell *matCellDef="let element" class="quantity-cell">
+            <button mat-icon-button (click)="decrementQuantity(element)">
+              <mat-icon>remove</mat-icon>
+            </button>
+           <span class="quantity-value">{{element.quantity}}</span>
+            <button mat-icon-button (click)="incrementQuantity(element)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+         <ng-container matColumnDef="totalPrice">
+          <th mat-header-cell *matHeaderCellDef> Total Price </th>
+          <td mat-cell *matCellDef="let element"> {{element.totalPrice | currency: 'INR'}} </td>
+        </ng-container>
+
+        
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div class="button-container">
+       <button mat-button (click)=" buyAll()">Buy All</button>
+       <button mat-button (click)="back()">Back to Product Page</button>
+       </div>
+    </div>
+    
+  </div>
+</div>
+

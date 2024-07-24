@@ -1,0 +1,112 @@
+.product-list {
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  border-radius: 60px;
+  background-image: url('/assets/images/bg.png');
+  background-size: cover; /* or 'contain' depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+
+h1{
+  text-align: center;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  margin-left: 10px;
+    background-color:  #007bff;
+    border-color: black;
+  border-width: 3px;
+
+}
+.button-container button:hover {
+  background-color:  #0056b3;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 900px; 
+  /* 3 columns */
+  gap: 20px;
+}
+
+.product-card {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden; /* Ensure the image does not overflow the card */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover img {
+  transform: scale(0.95); /* Zoom-out effect */
+}
+
+.product-card mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card img {
+  object-fit: cover;
+  height: 500px;
+  width: 100%;
+  transition: transform 0.2s; /* Smooth transition for the zoom-out effect */
+}
+
+.product-card mat-card-content p {
+  margin: 10px 0 0;
+  color: black;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column for smallest screens */
+  }
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.toolbar-title {
+  flex: 1;
+  text-align: center;
+}
+
+.toolbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+  
+}
+
+.welcome-message {
+  font-size: 24px;
+  color: #fff;  
+  text-align: center;
+  margin-bottom: 20px; 
+}
+

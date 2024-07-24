@@ -1,0 +1,35 @@
+<div class="totalcontainer">
+<div class="container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group" fxLayout="column" fxLayoutGap="16px">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Product Name</mat-label>
+        <input matInput formControlName="name" class="mat-input-element" />
+        <div *ngIf="productForm.get('name')!.invalid && productForm.get('name')!.touched" class="error-message">
+          Product name is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" class="mat-input-element"></textarea>
+        <div *ngIf="productForm.get('description')!.invalid && productForm.get('description')!.touched" class="error-message">
+          Product description is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" formControlName="price" class="mat-input-element" />
+        <div *ngIf="productForm.get('price')!.invalid && productForm.get('price')!.touched" class="error-message">
+          Product price is required.
+        </div>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Image URL</mat-label>
+        <input matInput formControlName="imageUrl" class="mat-input-element" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+</div>

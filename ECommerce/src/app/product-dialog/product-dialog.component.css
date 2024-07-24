@@ -1,0 +1,71 @@
+/* Define some color variables for consistency */
+:root {
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --danger-color: #dc3545;
+  --danger-color-hover: #c82333;
+  --text-color: #333;
+  --secondary-text-color: black;
+}
+
+mat-dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+mat-dialog-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  padding: 20px;
+}
+
+mat-dialog-content p {
+  margin-bottom: 8px;
+}
+
+mat-dialog-content p strong {
+  color: #333;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+}
+
+mat-dialog-actions button {
+  margin-left: 10px;
+  background-color:  #007bff;
+  color: black; /* Changed to white for better contrast */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+mat-dialog-actions button:hover {
+  background-color:  #0056b3;
+}
+
+mat-dialog-actions button.mat-dialog-close {
+  background-color: #dc3545;
+}
+
+mat-dialog-actions button.mat-dialog-close:hover {
+  background-color:  #c82333;
+}
+
+.container {
+  background-image: url('/assets/images/bg2.jpg');
+  background-size: cover; /* or 'contain' depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}

@@ -1,0 +1,40 @@
+<br/>
+<br/>
+<br/>
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="form-group">
+      <label for="Email">Email:</label>
+      <input
+        type="email"
+        id="Email"
+        name="Email"
+        [(ngModel)]="log.Email"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Password">Password:</label>
+      <input
+        type="password"
+        id="Password"
+        name="Password"
+        [(ngModel)]="log.Password"
+        required
+      />
+    </div>
+
+   <div class="button-container">
+  <button mat-button type="submit">Login</button>
+  <button mat-button (click)="back()">Back to Product Page</button>
+</div>
+    <br/>
+    <br/>
+    <p>Don't have an account? <a routerLink="/register">Register</a></p>
+    <p>{{ log.Message }}</p>
+  </form>
+</div>
+
+  

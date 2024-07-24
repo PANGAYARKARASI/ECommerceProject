@@ -1,0 +1,165 @@
+<!-- <div class="totalcontainer">
+   
+
+<div class="container" >
+  <form [formGroup]="AddressForm" (ngSubmit)="onSubmit()" >
+    <div class="form-group" fxLayout="column" fxLayoutGap="16px">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Street Address</mat-label>
+        <textarea matInput formControlName="streetAdd" class="mat-input-element" ></textarea>
+        <div *ngIf="AddressForm.get('streetAdd')!.invalid && AddressForm.get('streetAdd')!.touched" class="error-message">
+          Street Address is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" class="mat-input-element"/>
+        <div *ngIf="AddressForm.get('city')!.invalid && AddressForm.get('city')!.touched" class="error-message">
+          City is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state" class="mat-input-element" />
+        <div *ngIf="AddressForm.get('state')!.invalid && AddressForm.get('state')!.touched" class="error-message">
+          Product price is required.
+        </div>
+      </mat-form-field>
+
+       <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Pincode</mat-label>
+        <input matInput type="number" formControlName="pincode" class="mat-input-element" />
+        <div *ngIf="AddressForm.get('pincode')!.invalid && AddressForm.get('pincode')!.touched" class="error-message">
+          Pincode is required.
+        </div>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+  </div>
+
+
+  <div *ngIf="cartDetails.length > 0">
+      <h2>Cart Details for User ID: {{ userEmail }}</h2>
+      <table mat-table [dataSource]="cartDetails" class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef> Price </th>
+          <td mat-cell *matCellDef="let element"> {{element.price | currency:'INR'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+          <th mat-header-cell *matHeaderCellDef> Quantity </th>
+          <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <button mat-raised-button color="accent" (click)="goToPayment()">Proceed to Payment</button>
+    </div>
+</div> -->
+
+
+
+
+
+<div class="m-4">
+    <div class="ms-5 me-5">
+  <p class="h3 text-center">Add New Address</p>
+    <form [formGroup]="AddressForm" (ngSubmit)="onSubmit()">
+    <div class="form-group" fxLayout="column" fxLayoutGap="16px">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Street Address</mat-label>
+        <textarea matInput formControlName="streetAdd" class="mat-input-element" ></textarea>
+        <div *ngIf="AddressForm.get('streetAdd')!.invalid && AddressForm.get('streetAdd')!.touched" class="error-message">
+          Street Address is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" class="mat-input-element"/>
+        <div *ngIf="AddressForm.get('city')!.invalid && AddressForm.get('city')!.touched" class="error-message">
+          City is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state" class="mat-input-element" />
+        <div *ngIf="AddressForm.get('state')!.invalid && AddressForm.get('state')!.touched" class="error-message">
+          Product price is required.
+        </div>
+      </mat-form-field>
+
+       <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Pincode</mat-label>
+        <input matInput type="number" formControlName="pincode" class="mat-input-element" />
+        <div *ngIf="AddressForm.get('pincode')!.invalid && AddressForm.get('pincode')!.touched" class="error-message">
+          Pincode is required.
+        </div>
+      </mat-form-field>
+      
+      <div class="action-buttons">
+        <button mat-raised-button color="primary" type="submit">Add Address</button>
+        <div *ngIf="addresses.length > 0 " >
+         <!-- <p class="h3 text-center">Or Select an existing address:</p> -->
+        <mat-form-field appearance="fill" class="wide-dropdown">
+        <mat-label >Select an address</mat-label>
+        <mat-select [formControl]="selectedAddress">
+      <mat-option *ngFor="let address of addresses" [value]="address.addressId">
+        {{ address.streetAdd }}, {{ address.city }}, {{ address.state }} - {{ address.pincode }}
+      </mat-option>
+        </mat-select>
+     </mat-form-field>
+    </div>
+ 
+    </div>
+    </div>
+    </form>
+
+
+<div *ngIf="selectedAddress">
+    <p class="h3 text-center">Cart Details</p>
+    <table mat-table [dataSource]="cartDetails" class="mat-elevation-z8">
+      <!-- Define columns here -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+      </ng-container>
+
+       <ng-container matColumnDef="totalPrice">
+        <th mat-header-cell *matHeaderCellDef> Total Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalPrice}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <button mat-raised-button color="primary" (click)="goToPayment()">Proceed to Payment</button>
+</div>
+
+</div>
+  
+</div>
