@@ -1,0 +1,16 @@
+<div class="container">
+<h2 mat-dialog-title>{{ data.product.name }}</h2>
+<mat-dialog-content>
+  <p><strong>Description: </strong>{{ data.product.description }}</p>
+  <p><strong>Price: </strong>{{ data.product.price | currency:'INR' }}</p>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button *ngIf="canCreate()" (click)="data.onUpdate(data.product.id)">Update</button>
+  <button mat-button *ngIf="canCreate()" (click)="data.onDelete(data.product.id)">Delete</button>
+  <button mat-button *ngIf="!canCreate()" (click)="buyProduct(data.product.id)">Add to Cart</button>
+  <button mat-button *ngIf="canCreate()" (click)="order()">Order</button>
+<!-- <button mat-button *ngIf="!canCreate()" (click)="buy()">Buy</button> -->
+  <button mat-button mat-dialog-close (click)="onNoClick()">Close</button>
+</mat-dialog-actions>
+</div>

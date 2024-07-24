@@ -1,0 +1,97 @@
+/* create.component.css */
+
+/* Container for the form */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/images/bg.png');
+  background-size: cover; /* or 'contain' depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.totalcontainer{
+  background-image: url('/assets/images/bg2.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Style for form group elements */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.full-width {
+  width: 100%;
+}
+
+/* Style for form field labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  
+}
+
+/* Style for input fields */
+.mat-input-element {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+ 
+}
+
+/* Style for buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for Material form fields */
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field-label {
+  color: #333;
+  
+}
+
+.mat-form-field-underline {
+  border-color: #ccc;
+}
+
+.mat-form-field-ripple {
+  background-color: #007bff;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

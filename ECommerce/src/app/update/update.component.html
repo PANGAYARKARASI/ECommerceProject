@@ -1,0 +1,40 @@
+<div class="totalcontainer">
+<div class="container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group" fxLayout="column" fxLayoutGap="16px">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Product Name</mat-label>
+        <input matInput id="name" type="text" formControlName="name" class="mat-input-element"  />
+        <mat-error *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+          Product name is required.
+        </mat-error>
+      </mat-form-field>
+   
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput id="description" formControlName="description" class="mat-input-element" ></textarea>
+        <mat-error *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+          Description is required.
+        </mat-error>
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Price</mat-label>
+        <input matInput id="price" type="number" formControlName="price" class="mat-input-element"  />
+        <mat-error *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+          Price is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Image URL</mat-label>
+        <input matInput id="imageUrl" type="text" formControlName="imageUrl" class="mat-input-element" />
+          <mat-error *ngIf="productForm.get('imageUrl')?.invalid && productForm.get('imageUrl')?.touched">
+          Image is required.
+        </mat-error>
+      </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">Update Product</button>
+    </div>
+  </form>
+</div>
+</div>

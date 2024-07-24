@@ -1,0 +1,54 @@
+<div class="totalcontainer">
+  <br />
+  <br />
+  <br />
+  <div class="register-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="Name">Name:</label>
+        <input
+          type="text"
+          id="Name"
+          name="Name"
+          [(ngModel)]="formData.Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Role">Role:</label>
+        <div>
+          <select id="Role" name="Role" [(ngModel)]="formData.Role" required>
+            <option value="User">User</option>
+            <option value="Seller">Seller</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Email">Email:</label>
+        <input
+          type="email"
+          id="Email"
+          name="Email"
+          [(ngModel)]="formData.Email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Password">Password:</label>
+        <input
+          type="password"
+          id="Password"
+          name="Password"
+          [(ngModel)]="formData.Password"
+          required
+        />
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>

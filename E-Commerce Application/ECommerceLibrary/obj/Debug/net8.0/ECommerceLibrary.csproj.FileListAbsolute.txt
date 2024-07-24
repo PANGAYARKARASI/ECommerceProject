@@ -1,0 +1,14 @@
+D:\OJT\E-Commerce Application\ECommerceLibrary\bin\Debug\net8.0\ECommerceLibrary.deps.json
+D:\OJT\E-Commerce Application\ECommerceLibrary\bin\Debug\net8.0\ECommerceLibrary.runtimeconfig.json
+D:\OJT\E-Commerce Application\ECommerceLibrary\bin\Debug\net8.0\ECommerceLibrary.dll
+D:\OJT\E-Commerce Application\ECommerceLibrary\bin\Debug\net8.0\ECommerceLibrary.pdb
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.csproj.AssemblyReference.cache
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.AssemblyInfoInputs.cache
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.AssemblyInfo.cs
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.csproj.CoreCompileInputs.cache
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.dll
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\refint\ECommerceLibrary.dll
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.pdb
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ECommerceLibrary.genruntimeconfig.cache
+D:\OJT\E-Commerce Application\ECommerceLibrary\obj\Debug\net8.0\ref\ECommerceLibrary.dll
