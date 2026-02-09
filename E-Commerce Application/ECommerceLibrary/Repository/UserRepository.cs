@@ -96,7 +96,18 @@ namespace ECommerceLibrary.Repository
                 return (true, "Account created successfully", account.Role);
             }
         }
-
+        public async Task<List<User>> GetAllUsers()
+        {
+            try
+            {
+                List<User> users = await dbContext.Users.ToListAsync<User>();
+                return users;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }

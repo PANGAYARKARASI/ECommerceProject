@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P43yyJRNiuaaU5hImqlasHKl3Tp5r8uAUOqYU+EY/iHokxP5kUKUygo9VEt+owk7tpG2Mg89pH/+RsZb9AM4Qw==",
+  "dgSpecHash": "xeyJL4eepag=",
   "success": true,
-  "projectFilePath": "D:\\OJT\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj",
+  "projectFilePath": "D:\\EMS\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pangayarkarasi.samy\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\pangayarkarasi.samy\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

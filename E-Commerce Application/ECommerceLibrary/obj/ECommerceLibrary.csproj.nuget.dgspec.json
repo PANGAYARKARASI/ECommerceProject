@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OJT\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj": {}
+    "D:\\EMS\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj": {}
   },
   "projects": {
-    "D:\\OJT\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj": {
+    "D:\\EMS\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OJT\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj",
+        "projectUniqueName": "D:\\EMS\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj",
         "projectName": "ECommerceLibrary",
-        "projectPath": "D:\\OJT\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj",
+        "projectPath": "D:\\EMS\\E-Commerce Application\\ECommerceLibrary\\ECommerceLibrary.csproj",
         "packagesPath": "C:\\Users\\pangayarkarasi.samy\\.nuget\\packages\\",
-        "outputPath": "D:\\OJT\\E-Commerce Application\\ECommerceLibrary\\obj\\",
+        "outputPath": "D:\\EMS\\E-Commerce Application\\ECommerceLibrary\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\pangayarkarasi.samy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,12 +43,19 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -72,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

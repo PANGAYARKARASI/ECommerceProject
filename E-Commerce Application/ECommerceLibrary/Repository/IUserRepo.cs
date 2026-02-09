@@ -12,6 +12,7 @@ namespace ECommerceLibrary.Repository
     {
         Task InsertUser(User user);
         Task DeleteUser(string email);
+        Task<List<User>> GetAllUsers();
 
         Task<User> GetByEmail(string email);
 

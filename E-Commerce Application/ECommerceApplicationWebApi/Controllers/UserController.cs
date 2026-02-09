@@ -1,6 +1,7 @@
 ﻿using ECommerceLibrary.Model;
 using ECommerceLibrary.Repository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceApplicationWebApi.Controllers
@@ -70,6 +71,13 @@ namespace ECommerceApplicationWebApi.Controllers
             {
                 return Ok(new { isSuccess = false, message = ex.Message, role = ex.Message });
             }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetAllUsers()
+        {
+            List<User> users = await repo.GetAllUsers();
+            return Ok(users);
         }
     }
 }

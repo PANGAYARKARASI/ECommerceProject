@@ -23,8 +23,8 @@ namespace ECommerceLibrary.Model
         public decimal? Totalprice { get; set; }
        [ForeignKey("Address")]
        public int AddressId { get; set; }
-        public string OrderStatus { get; set; }
-        public string PaymentOptions { get; set;}
+        public string? OrderStatus { get; set; }
+        public string? PaymentOptions { get; set;}
         public User? User { get; set; }
         public Product? Product { get; set; }
         public Address? Address { get; set; }

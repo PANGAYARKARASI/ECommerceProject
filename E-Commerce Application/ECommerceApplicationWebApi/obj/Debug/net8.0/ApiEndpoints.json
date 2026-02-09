@@ -223,6 +223,16 @@
   },
   {
     "ContainingType": "ECommerceApplicationWebApi.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECommerceApplicationWebApi.Controllers.UserController",
     "Method": "Delete",
     "RelativePath": "api/User/{email}",
     "HttpMethod": "DELETE",
